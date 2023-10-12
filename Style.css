@@ -1,0 +1,160 @@
+/* ===== TODO =======  */
+
+*{
+    
+}
+
+body{
+    width: 100%;
+    line-height: 1;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.8fr 2.2fr 0.5fr;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+section{
+    
+}
+
+/*  SECAO INFO PESONAGENS    */
+
+#info_personagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(0, 0, 0) 70%,rgba(0, 0, 0, 0.92) 85%,rgba(0, 0, 0, 0.801) 100%);
+}
+
+#info_personagens div{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+#logo{
+    width: 60%;
+}
+
+#info_personagens h1{
+    font-size: 35px;
+    color: white;
+}
+
+#info_personagens p{
+ font-weight: 700;
+ font-size: 18px;
+ width: 90%;
+ color: rgb(218, 218, 218);
+}
+
+/*  SECAO PARA MUDAR PESONAGENS    */
+
+#muda_personagens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.468);
+}
+
+.bandeiras{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 100%;
+    transition: transform 0.6s;
+    margin: 1rem;
+}
+
+
+.bandeiras:hover{
+    transform: translateX(0px) scale(1.2);
+    cursor: pointer;
+}
+
+/*  DEIXAR RESPONSIVO    */
+
+@media screen and (max-width: 1252px) {
+    #info_personagens h1{
+        font-size: 30px;
+    }
+
+    #info_personagens p{
+        font-size: 16px;
+       }
+}
+
+@media screen and (max-width: 1072px) {
+    #info_personagens h1{
+        font-size: 25px;
+    }
+
+    #info_personagens p{
+        font-size: 15px;
+        width: 100%;
+       }
+}
+
+@media screen and (max-width: 895px) {
+    #info_personagens h1{
+        font-size: 20px;
+    }
+
+    #info_personagens p{
+        font-size: 13px;
+        width: 100%;
+       }
+}
+
+@media screen and (max-width: 480px) {
+    main{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 2.2fr 0.5fr;
+    }
+
+    #info_personagens{
+        background: linear-gradient(rgb(0, 0, 0) 70%,rgba(0, 0, 0, 0.92) 85%,rgba(0, 0, 0, 0.801) 100%);
+    }
+
+    #logo{
+        width: 25%;
+    }
+
+    #info_personagens div{
+        width: 98%;
+    }
+
+    #info_personagens div p, #info_personagens h1{
+        text-align: center;
+    }
+
+    #info_personagens div p{
+        margin-bottom: 5%;
+        color: rgb(235, 235, 235);
+        
+    }
+
+    #muda_personagens{
+        overflow-x: auto;
+    }
+
+    section{
+    }
+
+    .bandeiras{
+        width: 9vh;
+        height: 9vh;
+    }
+
+    #muda_personagens{
+        flex-direction: row;
+    }
+
+}
